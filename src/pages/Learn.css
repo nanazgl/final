@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap');
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card__inner {
+    width: 300px;
+    height: 200px;
+    margin-top: 15px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 3px 18px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+
+.question,
+.answer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    font-size: 18px;
+    color: #333;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-image: linear-gradient(to bottom right,#f7f2eb,#7096d1);
+    border-radius: 8px;
+}
+
+.answer {
+    transform: rotateY(-360deg);
+}
+
+.card__inner.is-flipped .card__face {
+    transform: rotateY(-360deg);
+}
+
+.hidden {
+    display: none;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+}
+button {
+    padding: 10px 20px;
+    background-color: #081F5C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #305c91;
+}
+
+@media (min-width: 768px) {
+    .section {
+
+        padding: 60px;
+    }
+
+    .card__inner {
+
+        width: 400px;
+        height: 250px;
+    }
+
+    .question,
+    .answer {
+        font-size: 24px;
+    }
+
+
+}
