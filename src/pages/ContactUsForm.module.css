@@ -18,7 +18,7 @@ body {
     min-height: 100vh;
     padding: 20px;
     width: 100%;
-    background: #7096d1;
+    background: #bad6eb;
     overflow-x: hidden;
     position: relative;
 }
@@ -38,11 +38,10 @@ body {
     position: absolute;
     width: 350px;
     height: 350px;
-    background: linear-gradient(#2196f3, #83d8ff);
+    background: linear-gradient(#d0e3ff, #83d8ff);
     border-radius: 50%;
     transform: translate(400px, 180px);
 }
-
 .container {
     position: relative;
     width: 100%;

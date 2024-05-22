@@ -1,13 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap');
 .section {
     display: flex;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 90vh;
+}
+
+.language-sidebar {
+    float: left;
+    width: 200px;
+    padding: 20px;
+    background-color: #081F5C;
+}
+
+.language-sidebar h3 {
+    margin-top: 0;
+}
+
+.language-selector {
+    h3 {
+        margin-top: 40px;
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #081F5C;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin-top: 30px;
+        font-size: 19px;
+        cursor: pointer;
+        margin-bottom: 5px;
+        color: #081F5C;
+        transition: color 0.3s ease;
+    }
+
+    li:hover {
+        color: #081F5C;
+    }
+}
+.theme-container {
+    margin-top: 70px;
+    margin-left: 10px;
+}
+    .section-content {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
+}
+
+.theme-selector {
+
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+
+.theme-selector h3 {
+    margin-top: 30px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.theme-selector select {
+
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.theme-selector select:hover {
+    border-color: #081F5C;
+}
+
+.theme-selector select:focus {
+    outline: none;
+    border-color: #305c91;
+}
+
+.theme-selector option {
+
+    font-size: 16px;
+}
+
+.flashcards-container {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
 }
 
 .card__inner {
-    width: 300px;
+    width: 400px;
     height: 200px;
     margin-top: 15px;
     perspective: 1000px;
@@ -26,7 +122,6 @@
     transition: transform 0.3s ease;
 }
 
-
 .question,
 .answer {
     display: flex;
@@ -39,9 +134,10 @@
     box-sizing: border-box;
     border: 1px solid #ddd;
     margin-bottom: 10px;
-    background-image: linear-gradient(to bottom right,#f7f2eb,#7096d1);
+    background-image: linear-gradient(to bottom right, #f7f2eb, #7096d1);
     border-radius: 8px;
 }
+
 
 .answer {
     transform: rotateY(-360deg);
@@ -61,6 +157,7 @@ p {
     color: #555;
     text-align: center;
 }
+
 button {
     padding: 10px 20px;
     background-color: #081F5C;
@@ -76,16 +173,94 @@ button {
 button:hover {
     background-color: #305c91;
 }
+button + button {
+    margin-left: 10px;
+}
+.instruction-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 100px;
+}
+.instruction{
+    font-size: 30px;
+    color: #081F5C;
+    text-align: center;
+}
+.instruction-image {
+    margin-top: 30px;
+    width: 450px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.quiz-container {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.selected-option {
+    background-color: #305c91;
+    color: #fff;
+}
+
+.quiz-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.quiz-question {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.quiz-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Разделение на две колонки */
+    gap: 10px;
+}
+
+.quiz-option {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quiz-option:hover {
+    background-color: #f0f0f0;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #081F5C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #305c91;
+}
+
+
 
 @media (min-width: 768px) {
     .section {
-
         padding: 60px;
+        min-height: 85vh;
     }
 
     .card__inner {
-
-        width: 400px;
+        width: 300px;
         height: 250px;
     }
 
@@ -93,6 +268,8 @@ button:hover {
     .answer {
         font-size: 24px;
     }
-
+    .instruction-container{
+        margin-left: 200px;
+    }
 
 }
